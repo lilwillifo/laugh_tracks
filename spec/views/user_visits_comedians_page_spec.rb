@@ -19,4 +19,12 @@ describe 'User visits comedians page' do
     expect(page).to have_content('Parks and Rec')
     expect(page).to have_content('SNL')
   end
+  it 'sees average age of all comediants' do
+    Comedian.create(name: 'Amy Poehler', age: 36)
+    Comedian.create(name: 'Tina Fey', age: 38)
+
+    visit '/comedians'
+    save_and_open_page
+    expect(page).to have_content('Average Age: 37')
+  end
 end
