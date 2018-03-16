@@ -1,5 +1,5 @@
 describe 'User visits comedians page' do
-  it 'sees all merchants names and ages' do
+  it 'sees all comedians names and ages' do
     Comedian.create(name: 'Amy Poehler', age: 36)
     Comedian.create(name: 'Tina Fey', age: 38)
     visit '/comedians'
